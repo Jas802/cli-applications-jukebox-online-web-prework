@@ -24,7 +24,18 @@ def list(songs)
 }
 end
 
-def play
+def play(songs)
+  puts "Please enter a song name or number:"
+  response = gets.chomp
+  if responseto_i >= 1 &&responseto_i <= songs.length
+    puts "PLaying #{songs[response.to_i-1]}"
+  elsif songs.include?(response)
+    puts "PLaying #{songs.find{|song| song == responmse}}"
+  else
+    puts "Invalid input, please try again"
+  end
+end
+    
 
 end
 
